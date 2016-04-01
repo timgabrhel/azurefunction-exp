@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "type": "manualTrigger",
+      "direction": "in",
+      "name": "input"
+    },
+    {
+      "tableName": "workitems",
+      "partitionKey": "items",
+      "take": 50,
+      "filter": "status eq 'Not Started",
+      "connection": "azurefunctionexp_STORAGE",
+      "name": "myTable",
+      "type": "table",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
